@@ -4,4 +4,8 @@
 
 #### demo 1
 
-![demo 1](./src/images/day1.gif);
+![demo 1](./src/images/day1.gif)
+
+#### demo 2
+
+![demo 2](./src/images/day2.gif)

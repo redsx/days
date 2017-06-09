@@ -8,7 +8,7 @@ import {
     TouchableHighlight,
     View 
 } from 'react-native';
-import Util from '../utils/util';
+import Util from './utils/util';
 
 const lab = {
     START: '启动',
@@ -94,7 +94,10 @@ class WatchCtrl extends Component {
             });
         } else {
             this.props.handleStart();
-            this.setState({btnRight: lab.STOP});
+            this.setState({
+                btnRight: lab.STOP,
+                btnLeft: lab.COUNT,
+            });
         }
     }
     _selectColor(text) {
