@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -11,13 +5,13 @@ import {
   Text,
   View
 } from 'react-native';
-import Watch from './src/days/day1-c';
+import Watch from './src/days/demo4/index';
 
 export default class days extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Watch/>
+        <Watch />
       </View>
     );
   }

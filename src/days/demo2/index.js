@@ -18,6 +18,59 @@ import DayItem from './components/DayItem';
 import DayList from './components/DayList';
 import TodayInfo from './components/TodayInfo';
 
+export default class extends Component {
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return (
+            <Swiper
+                dot={<View style={styles.dot}/>}
+                activeDot={<View style={styles.activeDot}/>}
+            >
+                {data.map((day, index)=>(
+                    <Image source={day.bgImg} style={styles.image} key={index}>
+                        <ScrollView>
+                            <Header info={day.headerInfo}/>
+                            <DayItem info={day.info} />
+                            <DayViwe info={day.dayInfo}/>
+                            <DayList list={day.dayList}/>
+                            <TodayInfo info={day.todayInfo}/>
+                        </ScrollView>
+                    </Image>
+                ))}
+            </Swiper>
+        );
+    }
+}
+const styles = StyleSheet.create({
+    image: {
+        height: Util.size.height,
+    },
+    dot: {
+        backgroundColor: 'rgba(255,255,255,0.2)', 
+        width: 6, 
+        height: 6, 
+        borderRadius: 3, 
+        marginLeft: 3,
+        marginRight: 3, 
+        marginTop: 3, 
+        marginBottom: 3,
+    },
+    activeDot: {
+        backgroundColor: 'rgba(255,255,255,0.5)', 
+        width: 6, 
+        height: 6, 
+        borderRadius: 3, 
+        marginLeft: 3, 
+        marginRight: 3, 
+        marginTop: 3, 
+        marginBottom: 3,
+    },
+})
+
+
+
 const data = [
     {
         bgImg: require('../img/w2.png'),
@@ -92,54 +145,3 @@ const data = [
         todayInfo: '今天：空气质量指数：简称AQI，是定量描述空气质量状况的无量纲指数。（数据由环保部提供)',
     }
 ]
-
-export default class extends Component {
-    constructor(props){
-        super(props);
-    }
-    render(){
-        return (
-            <Swiper
-                dot={<View style={styles.dot}/>}
-                activeDot={<View style={styles.activeDot}/>}
-            >
-                {data.map((day, index)=>(
-                    <Image source={day.bgImg} style={styles.image} key={index}>
-                        <ScrollView>
-                            <Header info={day.headerInfo}/>
-                            <DayItem info={day.info} />
-                            <DayViwe info={day.dayInfo}/>
-                            <DayList list={day.dayList}/>
-                            <TodayInfo info={day.todayInfo}/>
-                        </ScrollView>
-                    </Image>
-                ))}
-            </Swiper>
-        );
-    }
-}
-const styles = StyleSheet.create({
-    image: {
-        height: Util.size.height,
-    },
-    dot: {
-        backgroundColor: 'rgba(255,255,255,0.2)', 
-        width: 6, 
-        height: 6, 
-        borderRadius: 3, 
-        marginLeft: 3,
-        marginRight: 3, 
-        marginTop: 3, 
-        marginBottom: 3,
-    },
-    activeDot: {
-        backgroundColor: 'rgba(255,255,255,0.5)', 
-        width: 6, 
-        height: 6, 
-        borderRadius: 3, 
-        marginLeft: 3, 
-        marginRight: 3, 
-        marginTop: 3, 
-        marginBottom: 3,
-    },
-})

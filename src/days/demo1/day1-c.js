@@ -8,7 +8,7 @@ import {
     TouchableHighlight,
     View 
 } from 'react-native';
-import Util from './utils/util';
+import Util from '../utils/util';
 
 const lab = {
     START: '启动',
