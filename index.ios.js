@@ -5,7 +5,7 @@ import {
   Text,
   View
 } from 'react-native';
-import Watch from './src/days/demo4/index';
+import Watch from './src/days/demo5/index';
 
 export default class days extends Component {
   render() {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#fff',
   },
   welcome: {
     fontSize: 20,

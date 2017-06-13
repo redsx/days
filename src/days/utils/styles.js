@@ -4,7 +4,7 @@ const styles =  (function(){
             const styles = {};
             const borderWidth = `border${direction}Width`,
                 borderColor = `border${direction}Color`,
-                borderStyle = `border${direction}Style`;
+                borderStyle = 'borderStyle';
             styles[borderWidth] = width;
             styles[borderColor] = color;
             styles[borderStyle] = style;
@@ -29,15 +29,10 @@ const styles =  (function(){
             return style;
         }
     }
-    function layout(modal){
-        switch(modal){
-            case 'center':
-            default: {
-                return {
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }
-            }
+    function layout(col='center',row='center'){
+        return {
+            alignItems: col,
+            justifyContent: row,
         }
     }
     return {

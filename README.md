@@ -23,3 +23,8 @@ days将[https://github.com/redsx/NAMI](https://github.com/redsx/NAMI)移动端�
 实现查看图片组件
 
 ![demo 4](./src/images/day4.gif)
+
+#### demo 5
+消息列表
+
+![demo 5](./src/images/day5.gif)
